@@ -26,6 +26,7 @@ if [ -f "$SOURCE/config.json" ]; then
 fi
 
 #backup sqlite3
-sqlite3 $SOURCE/db.sqlite3 ".backup '$TARGET/db.sqlite3'"
+sqlite3 $SOURCE/db.sqlite3 ".backup /tmp/db.sqlite3"
+cp /tmp/db.sqlite3 $TARGET
 
 date +"%Y-%m-%dT%H:%M:%S%z" > $TARGET/last_backup
