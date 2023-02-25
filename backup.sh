@@ -1,4 +1,5 @@
 #!/bin/sh
+set -e
 
 SOURCE="/vaultwarden"
 TARGET="/backup"
